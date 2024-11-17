@@ -1,0 +1,18 @@
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img routerLink="/home" class="logo" src="images/forum-logo.png" alt="">
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/posts">Posts</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+      @if(isLoggedIn) {
+        <li><a routerLink="/login">John's Profile</a> / <a (click)="logout()">Logout</a></li>
+      } @else {
+        <li><a routerLink="/login">Login</a> / <a routerLink="/register">Register</a></li>
+      }
+    </ul>
+  </nav>
+</header>
