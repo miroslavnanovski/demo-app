@@ -21,5 +21,5 @@ import { ErrorComponent } from './shared/error/error.component';
 })
 export class AppComponent {
   title = 'demo-app';
-
+  
 }

@@ -1,13 +1,9 @@
 <header>
   <nav class="navbar">
-    <div class="logo">
-      <img routerLink="/home" class="logo" src="images/forum-logo.png" alt="">
-    </div>
-    <ul class="nav-links">
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/posts">Posts</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+    <div class="menu-holder">
+    <app-hamburger-menu class="menu"/>
+  </div>
+    <ul class="loginBar">
       @if(isLoggedIn) {
         <li><a routerLink="/login">John's Profile</a> / <a (click)="logout()">Logout</a></li>
       } @else {

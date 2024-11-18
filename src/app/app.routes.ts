@@ -8,6 +8,7 @@ import { RegisterPageComponent } from './user/register-page/register-page.compon
 import { LoginPageComponent } from './user/login-page/login-page.component';
 import { ErrorComponent } from './shared/error/error.component';
 import { CurrentThemeComponent } from './themes/current-theme/current-theme.component';
+import { ThemesPageComponent } from './themes-page/themes-page.component';
 
 export const routes: Routes = [
     {path:'', redirectTo: '/home', pathMatch:'full'},
@@ -19,7 +20,7 @@ export const routes: Routes = [
     {path: 'login', component:LoginPageComponent},
     {path: 'themes', 
         children:[
-            {path:'',component:HomePageComponent},
+            {path:'',component:ThemesPageComponent},
             {path:':themeId', component:CurrentThemeComponent}
         ]
     },
